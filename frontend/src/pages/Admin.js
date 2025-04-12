@@ -20,7 +20,7 @@ const Admin = () => {
         } else {
             fetchCafes();
         }
-    }, []);
+    });
 
     const handleUpdateCafe = async (e) => {
         e.preventDefault();
