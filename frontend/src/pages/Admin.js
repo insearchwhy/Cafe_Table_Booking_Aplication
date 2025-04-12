@@ -46,7 +46,7 @@ const Admin = () => {
 
     const fetchCafes = async () => {
         try {
-            const res = await axios.get('${process.env.REACT_APP_API_URL}/api/cafes');
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/cafes`);
             setCafes(res.data);
         } catch (err) {
             console.error(err);
@@ -60,7 +60,7 @@ const Admin = () => {
     const handleAddCafe = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('${process.env.REACT_APP_API_URL}/api/cafes', newCafe);
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/cafes`, newCafe);
             setNewCafe({ name: '', totalTables: 0 });
             fetchCafes();
         } catch (err) {
