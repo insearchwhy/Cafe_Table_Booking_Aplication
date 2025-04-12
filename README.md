@@ -146,13 +146,6 @@ npm install
 
 4. Create environment files:
 
-Backend (.env):
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/cafe_booking
-JWT_SECRET=your_jwt_secret
-```
-
 Frontend (.env):
 ```env
 REACT_APP_API_URL=http://localhost:5000
