@@ -23,7 +23,7 @@ const Landing = () => {
 
     const fetchCafes = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/cafes');
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/cafes`);
             setCafes(res.data);
         } catch (err) {
             console.error(err);
