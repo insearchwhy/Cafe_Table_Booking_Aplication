@@ -34,12 +34,12 @@ const Landing = () => {
         if (!selectedCafe || selectedCafe.reservedTables.includes(tableNumber)) return;
 
         try {
-            const res = await axios.post(`http://localhost:5000/api/cafes/book`, {
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/cafes/book`, {
                 cafeId: selectedCafe._id,
                 tableNumber
             });
             alert(res.data.message);
-            const updatedCafe = await axios.get(`http://localhost:5000/api/cafes/${selectedCafe._id}`);
+            const updatedCafe = await axios.get(`${process.env.REACT_APP_API_URL}/api/cafes/${selectedCafe._id}`);
             setSelectedCafe(updatedCafe.data);
             fetchCafes();
         } catch (err) {
@@ -54,7 +54,7 @@ const Landing = () => {
 
     const handleSelectCafe = async (cafe) => {
         try {
-            const updatedCafe = await axios.get(`http://localhost:5000/api/cafes/${cafe._id}`);
+            const updatedCafe = await axios.get(`${process.env.REACT_APP_API_URL}/api/cafes/${cafe._id}`);
             setSelectedCafe(updatedCafe.data);
             
         } catch (err) {
