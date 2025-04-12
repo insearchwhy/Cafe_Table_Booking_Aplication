@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaUserPlus } from 'react-icons/fa';
 
 const Register = () => {
@@ -26,8 +26,8 @@ const Register = () => {
             return;
         }
         try {
-            await axios.post('http://localhost:5000/api/auth/register', form);
-            navigate('/login');
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, form);
+            window.location.href = '/login';
         } catch (err) {
             setErrors({ general: 'Registration failed' });
         }
