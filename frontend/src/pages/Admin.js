@@ -25,7 +25,7 @@ const Admin = () => {
     const handleUpdateCafe = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/cafes/${editingCafe._id}`, editingCafe);
+            await axios.put(`${process.env.REACT_APP_API_URL}/api/cafes/${editingCafe._id}`, editingCafe);
             setEditingCafe(null);
             fetchCafes();
         } catch (err) {
@@ -36,7 +36,7 @@ const Admin = () => {
     const handleDeleteCafe = async (id) => {
         if (window.confirm('Are you sure you want to delete this café?')) {
             try {
-                await axios.delete(`http://localhost:5000/api/cafes/${id}`);
+                await axios.delete(`${process.env.REACT_APP_API_URL}/api/cafes/${id}`);
                 fetchCafes();
             } catch (err) {
                 console.error(err);
@@ -46,7 +46,7 @@ const Admin = () => {
 
     const fetchCafes = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/cafes');
+            const res = await axios.get('${process.env.REACT_APP_API_URL}/api/cafes');
             setCafes(res.data);
         } catch (err) {
             console.error(err);
@@ -60,7 +60,7 @@ const Admin = () => {
     const handleAddCafe = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/cafes', newCafe);
+            await axios.post('${process.env.REACT_APP_API_URL}/api/cafes', newCafe);
             setNewCafe({ name: '', totalTables: 0 });
             fetchCafes();
         } catch (err) {
