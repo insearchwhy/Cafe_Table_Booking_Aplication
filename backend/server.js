@@ -15,7 +15,10 @@ import cafeRoutes from './routes/CafeRoute.js';
 
 mongoose.connect("mongodb+srv://insearchwhy:ucit8ABbjX4RNBjb@cafetable.pntwxbk.mongodb.net/?retryWrites=true&w=majority&appName=cafetable", {
     useNewUrlParser: true,
+  
     useUnifiedTopology: true,
+      ssl: true,
+  tlsAllowInvalidCertificates: false 
 })
 
 const userSchema = new mongoose.Schema({
