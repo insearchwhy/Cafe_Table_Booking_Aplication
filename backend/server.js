@@ -12,8 +12,8 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 import cafeRoutes from './routes/CafeRoute.js';
-console.log('url is', process.env.MONGO_URI);
-mongoose.connect(process.env.MONGO_URI, {
+
+mongoose.connect("mongodb+srv://insearchwhy:ucit8ABbjX4RNBjb@cafetable.pntwxbk.mongodb.net/?retryWrites=true&w=majority&appName=cafetable", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
