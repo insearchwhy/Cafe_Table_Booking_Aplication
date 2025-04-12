@@ -10,7 +10,7 @@ const Landing = () => {
     const [cafes, setCafes] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCafe, setSelectedCafe] = useState(null);
-    const [selectedTable, setSelectedTable] = useState(null);
+    
 
     const handleLogout = () => {
         localStorage.removeItem('token');
@@ -56,7 +56,7 @@ const Landing = () => {
         try {
             const updatedCafe = await axios.get(`http://localhost:5000/api/cafes/${cafe._id}`);
             setSelectedCafe(updatedCafe.data);
-            setSelectedTable(null);
+            
         } catch (err) {
             console.error(err);
         }
