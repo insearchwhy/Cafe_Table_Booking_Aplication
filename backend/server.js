@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 const app = express();
-const PORT = 5000;
+const PORT = 443;
 const JWT_SECRET = 'yourSecretKey';
 import dotenv from 'dotenv';
 dotenv.config();
