@@ -1,0 +1,14 @@
+.login-page {
+    background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.landing-page {
+    background-image: url('https://images.unsplash.com/photo-1541542684-4b33a7da1f4b');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-top: 60px;
+}

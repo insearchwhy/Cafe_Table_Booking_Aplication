@@ -1,0 +1,32 @@
+/* src/pages/Landing.css */
+
+.landing-page {
+    background: url('https://images.unsplash.com/photo-1509404653511-52e96c2c9d0f') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #333;
+}
+
+.landing-page .navbar {
+    background-color: rgba(255, 193, 7, 0.9); /* Bootstrap warning color with opacity */
+}
+
+.landing-page .navbar-brand {
+    font-size: 1.6rem;
+    color: white !important;
+}
+
+.landing-page .btn {
+    font-weight: 600;
+}
+
+.landing-page .container {
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+}
+
+.landing-page h1,
+.landing-page p {
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
