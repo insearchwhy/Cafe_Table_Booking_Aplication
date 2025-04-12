@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 const app = express();
 const PORT = 443;
-const JWT_SECRET = 'yourSecretKey';
+const JWT_SECRET = 'b9f6e3d8e4274c8b9cf84e4ea2533d6b9a207fc1d6f4a1a5b370d0ab8c1737e6';
 import dotenv from 'dotenv';
 dotenv.config();
 app.use(cors());
