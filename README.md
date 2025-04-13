@@ -2,6 +2,11 @@
 
 A modern web application for managing table reservations in cafes and restaurants. Built with MERN stack (MongoDB, Express.js, React.js, Node.js).
 
+Website Deployed - https://cafe-table-booking-aplication.onrender.com/login
+Admin Dashboard - https://cafe-table-booking-aplication.onrender.com/adminlogin
+Admin details - admin@cafe.com
+password-       admin123
+
 ## Features
 
 ### Customer Features
