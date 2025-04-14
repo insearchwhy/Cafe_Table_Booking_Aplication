@@ -15,7 +15,7 @@ import AdminLogin from "./pages/AdminLogin";
 
 const App = () => {
     const isAuthenticated = !!localStorage.getItem('token');
-
+alert("Warning!! Please revert back to email manpreet.singh76961@gmail.com");
     return (
         <Router>
             <Routes>
